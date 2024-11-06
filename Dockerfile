@@ -21,7 +21,7 @@ FROM nginx:alpine
 
 # Copy the built files from the previous step
 # Copy the built files from the previous step
-COPY --from=build /app/dist/PostageStamps /usr/share/nginx/html
+COPY --from=build /app/dist/postage-stamps /usr/share/nginx/html
 
 # Expose the default port
 EXPOSE 80
