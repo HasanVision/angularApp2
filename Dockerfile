@@ -20,7 +20,8 @@ RUN npm run build --prod
 FROM nginx:alpine
 
 # Copy the built files from the previous step
-COPY --from=build /app/dist/[YOUR_PROJECT_NAME] /usr/share/nginx/html
+# Copy the built files from the previous step
+COPY --from=build /app/dist/PostageStamps /usr/share/nginx/html
 
 # Expose the default port
 EXPOSE 80
