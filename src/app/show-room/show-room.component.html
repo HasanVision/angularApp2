@@ -1,0 +1,13 @@
+
+  <div class="row mt-4">
+    <div class="col-sm-6 col-md-3" *ngFor="let stamp of stamps">
+      <div class="card mb-3" style="width: 100%; max-width: 400px;">
+        <img [src]="stamp.image" class="card-img-top" alt="Stamp Image" style="height: 220px; object-fit: cover;">
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1">{{ stamp.name }}</h6>
+          <p class="card-text mb-2" style="font-size: 1rem;">$ {{ stamp.price }}</p>
+          <button class="btn btn-sm btn-primary" (click)="addToCart(stamp)">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>

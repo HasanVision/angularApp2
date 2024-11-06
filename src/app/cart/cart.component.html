@@ -1,0 +1,14 @@
+<div class="card">
+    <div class="card-header">
+      <h5>Your Cart</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item" *ngFor="let item of cart">
+        {{ item.name }} - ${{ item.price }}
+        <button class="btn btn-danger btn-sm float-end" (click)="removeFromCart(item)">Remove</button>
+      </li>
+    </ul>
+    <div class="card-footer">
+      <strong>Total:</strong> $ {{ totalPrice }}
+    </div>
+  </div>
