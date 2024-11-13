@@ -7,6 +7,8 @@
           <h6 class="card-title mb-1">{{ stamp.name }}</h6>
           <p class="card-text mb-2" style="font-size: 1rem;">$ {{ stamp.price }}</p>
           <span *ngIf="stamp.stock === 0" class="text-danger">Out of Stock</span>
+          <!-- <span *ngIf="stamp.stock ! === 0" class="text-danger">Out of Stock</span> -->
+
           <div class="input-group">
             <input type="number" [(ngModel)]="stamp.quantity" min="1" max="100" class="form-control" placeholder="Quantity">
             <button class="btn btn-primary" (click)="addToCart(stamp)" [disabled]="stamp.stock === 0">Add to Cart</button>
