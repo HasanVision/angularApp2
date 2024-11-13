@@ -6,7 +6,10 @@
         <div class="card-body p-2">
           <h6 class="card-title mb-1">{{ stamp.name }}</h6>
           <p class="card-text mb-2" style="font-size: 1rem;">$ {{ stamp.price }}</p>
-          <button class="btn btn-sm btn-primary" (click)="addToCart(stamp)">Add to Cart</button>
+          <div class="input-group">
+            <input type="number" [(ngModel)]="stamp.quantity" min="1" max="100" class="form-control" placeholder="Quantity">
+            <button class="btn btn-primary" (click)="addToCart(stamp)">Add to Cart</button>
+          </div>
         </div>
       </div>
     </div>
