@@ -4,4 +4,5 @@ interface Stamp {
     price: number;
     image: string;
     quantity?: number
+    stock?: number
   }
